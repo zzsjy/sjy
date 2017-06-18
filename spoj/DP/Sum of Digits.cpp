@@ -22,20 +22,13 @@ int main(void)
 LL slove(LL n)
 {
     if(my.count(n))
-    {
         return my[n];
-    }
     if(n <= 9)
-    {
         return my[n] = (n+(LL)1)*n/(LL)2;
-    }
     LL t = 1;
     int cp = n;
     while(cp > 0)
-    {
-        t*=10;
-        cp/=10;
-    }
+        t*=10,cp/=10;
     t/=10;
     LL c = n%t + 1;
     LL head  = n/t;
